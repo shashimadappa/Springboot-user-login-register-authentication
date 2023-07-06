@@ -34,14 +34,6 @@ public class AuthenticationController {
         return UserService.loginUser(credentials);
     }
 
-//    @GetMapping("/authenticate")
-//    public ResponseEntity<?> auth(@RequestHeader("Authorization") String token){
-//        String email = Utils.decodeToken(token);
-//        UserSignup username = UserRepository.findByEmail(email);
-//        System.out.println(username);
-//        return ResponseEntity.ok().body(username);
-//    }
-
     @GetMapping("/authenticate")
     public ResponseEntity<?> getAllUsers(@RequestHeader("Authorization") String token){
         String email = Utils.decodeToken(token);
