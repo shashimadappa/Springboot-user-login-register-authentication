@@ -2,6 +2,7 @@
 - user signup and sign in with jwt authentication and get all users RestfulAPI.
 - download the zip file and load it in Intellij as a maven project it is.
 - I have added a swagger link as well please follow http://localhost:9090/swagger-ui/index.html after running in IDE.
+- -schema can be seen in swagger
 
 - below are a few screenshots from Postman and Swagger:
 ![Screenshot (19)](https://github.com/shashimadappa/Springboot-user-login-register-authentication/assets/103553061/cc810690-4c6f-4b11-bde3-68f61cbf8638)
