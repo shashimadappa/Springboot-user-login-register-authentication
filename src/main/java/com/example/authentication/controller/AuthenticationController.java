@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.authentication.utils.Utils;
 import com.example.authentication.service.UserService;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 public class AuthenticationController {
     @Autowired
@@ -25,12 +26,14 @@ public class AuthenticationController {
 
     @PostMapping("/UserSignup")
     public ResponseEntity<?> registerUser(@RequestBody Credentials credentials) {
+        System.out.println("triggred");
         return UserService.registerUser(credentials);
     }
 
     @PostMapping("/UserLogin")
     public ResponseEntity<?> loginUser(@RequestBody Credentials credentials) {
 
+        System.out.println("triggred");
         return UserService.loginUser(credentials);
     }
 
@@ -41,6 +44,5 @@ public class AuthenticationController {
         System.out.println(userDetails);
         return UserService.getAllUsers(userDetails);
     }
-
 
 }
